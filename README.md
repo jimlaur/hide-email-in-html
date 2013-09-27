@@ -54,11 +54,6 @@ This script unconditionally replaces all email addresses found. The script can b
 
 The script is stored in the web folder, it is executable by user with shell access.
 
-There is a configuration file, ''hide-email.conf'', which can be edited with pico.
-The configuration file can be used to specify
-the name of the original file to revise and the name of the file in which to store the revised text.
-These can be the same file, in which case the original file is overwritten.
-
 A subfolder, ''App'', is created to hold the options Perl module, because the current folder (.) is included in the @INC Perl search path for modules. The module is ''./App/Options.pm'', which is available from the Perl CPAN library.
 
 
