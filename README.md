@@ -44,15 +44,11 @@ You should run this command from the folder where the program is installed. The 
 
 ===limitations===
 
-This script unconditionally replaces all email addresses found. The script can be confused by finding email addresses inside of existing scripts. In this example the existing script will be corrupted by the conversion of the email address found inside the comment.
-
- <script language="JavaScript" src="inc/js/ts_picker.js">
- //Script by Denis Gritcyuk: tspicker@yahoo.com
- </script>
+This script unconditionally replaces all email addresses found. The script can be confused by finding email addresses inside of existing scripts. 
 
 ==Installation==
 
-The script is stored in the web folder, it is executable by user with shell access.
+The script is stored in the web folder, it is executable by a user with shell access.
 
 A subfolder, ''App'', is created to hold the options Perl module, because the current folder (.) is included in the @INC Perl search path for modules. The module is ''./App/Options.pm'', which is available from the Perl CPAN library.
 
