@@ -1,13 +1,15 @@
 hide-email-in-html
 ==================
 
-A perl script used to hide email addresses in web pages from spam address harvesters.
+This is a perl script, used sucessfully, to hide email addresses in static web pages from spam address harvesters.
 
-This script was developed to automate the conversion of plain email addresses in static web pages into fragments of javascript that will create mailto links in the page when it is downloaded and rendered.
+The script automates the conversion of plain email addresses in a static web page into fragments of javascript that will create mailto links in the page when it is downloaded and rendered.
 
-This has the dual advantages that users can now click on the links to send email and that spam address harvesting will be more difficult.
+The conversion has the dual advantages that users can now click on the links to send email and that spam address harvesting will be more difficult.
 
 The script was written under the assumption that the script and the web pages being converted are located on a Linux server.
+
+Although this is written in perl, the concept is quite general. This script could easily be ported to any language that uses perl style regular expressions.
 
 ==How to use it==
 
@@ -52,4 +54,15 @@ The script is stored in the web folder, it is executable by a user with shell ac
 
 A subfolder, ''App'', is created to hold the options Perl module, because the current folder (.) is included in the @INC Perl search path for modules. The module is ''./App/Options.pm'', which is available from the Perl CPAN library.
 
+==description of operation==
+
+There is an initial setup phase where the script determines the names of the file to convert and the destination file after conversion.
+
+The script also sets up the 3 part javascript substitution template.
+
+The script then reads the file to convert all at once.
+
+A global search and replace statement is applied to the input file which converts all email addresses matching a given regular expression into javascript statments.
+
+The script then writes the conveted file to the destination.
 
